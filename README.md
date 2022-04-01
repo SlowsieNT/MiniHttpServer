@@ -1,6 +1,10 @@
 # MiniHttpServer
 Simple http server
 
+## Source code?
+Yes, ANYONE is ALLOWED to do ANYTHING.
+It is OPTIONAL to leave credits.
+
 ## Command Line
 `minihttp.exe settings.json`
 
