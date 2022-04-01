@@ -146,10 +146,10 @@ namespace minihttp
                                     WriteText(vCtx, File.ReadAllText(vResponseFileStr));
                                 else WriteText(vCtx, "403");
                                 vCtx.Response.Close();
-                                return;
                             }
                         }
                     }
+                    if (!vCanProceedByRule) return;
                     if (!vRespCodeAppliedByRule)
                         vCtx.Response.StatusCode = 404;
                     FileInfo vFI = null;
