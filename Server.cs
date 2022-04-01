@@ -139,6 +139,7 @@ namespace minihttp
                                 vCtx.Response.StatusCode = vCode;
                             }
                             if (!vCanProceedByRule) {
+                                vRespCodeAppliedByRule = true;
                                 if (!vRespCodeAppliedByRule) vCtx.Response.StatusCode = 403;
                                 bool vExistsFlag = File.Exists(vResponseFileStr);
                                 if (vExistsFlag)
