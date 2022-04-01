@@ -2,8 +2,8 @@
 Simple http server
 
 ## Source code?
-Yes, ANYONE is ALLOWED to do ANYTHING.
-It is OPTIONAL to leave credits.
+Yes, ANYONE is ALLOWED to do ANYTHING.<br>
+It is OPTIONAL to leave credits.<br>
 
 ## Command Line
 `minihttp.exe settings.json`
