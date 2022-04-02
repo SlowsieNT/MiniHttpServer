@@ -29,7 +29,9 @@ namespace minihttp
         public bool ServerLog;
         public int ServerBufferSize;
         public string[] DefaultPages;
+        public string[] DefaultPagesAdd;
         public string[] MimeTypes;
+        public string[] MimeTypesAdd;
         public object[][] PathRules;
         public string IndexOfDirLine;
         public string IndexOfFileLine;
@@ -70,8 +72,12 @@ namespace minihttp
                         ServerPath = vSettings.ServerPath;
                     if (null != vSettings.DefaultPages)
                         DefaultPages = vSettings.DefaultPages;
+                    if (null != vSettings.DefaultPagesAdd && 0 < vSettings.DefaultPagesAdd.Length)
+                        DefaultPages = DefaultPages.Concat(vSettings.DefaultPagesAdd).ToArray();
                     if (null != vSettings.MimeTypes)
                         MimeTypes = vSettings.MimeTypes;
+                    if (null != vSettings.MimeTypesAdd && 0 < vSettings.MimeTypesAdd.Length)
+                        MimeTypes = MimeTypes.Concat(vSettings.MimeTypesAdd).ToArray();
                     if (null != vSettings.PathRules)
                         PathRules = vSettings.PathRules;
                     if (default != vSettings.ServerBufferSize && vSettings.ServerBufferSize > 32 && vSettings.ServerBufferSize < 64 * 1024 * 1024)
