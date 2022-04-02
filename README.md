@@ -16,7 +16,9 @@ public class JServerSettings {
     public bool ServerLog;
     public int ServerBufferSize;
     public string[] DefaultPages;
+    public string[] DefaultPagesAdd;
     public string[] MimeTypes;
+    public string[] MimeTypesAdd;
     public object[][] PathRules;
     public string IndexOfDirLine;
     public string IndexOfFileLine;
