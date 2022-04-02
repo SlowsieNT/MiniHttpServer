@@ -14,7 +14,7 @@ public class JServerSettings {
     public string ServerPath;
     public bool ServerAllowIndexOf;
     public bool ServerLog;
-    public int ServerBufferSize;
+    public int ServerBufferSize; // 64MiB is limit
     public string[] DefaultPages;
     public string[] DefaultPagesAdd;
     public string[] MimeTypes;
