@@ -9,6 +9,7 @@ It is OPTIONAL to leave credits, relief- isn't it?<br>
 
 ## JSON Structure
 ```cs
+// NOTE: in JSON, most values can be null
 public class JServerSettings {
     public string[] ServerPrefixes;
     public string ServerPath;
