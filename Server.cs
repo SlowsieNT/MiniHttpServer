@@ -215,7 +215,7 @@ namespace minihttp
                             foreach (var vItem in Directory.GetDirectories(vPath)) {
                                 var vPath2 = vPath.Substring(ServerPath.Length);
                                 var vInfo = new DirectoryInfo(vItem);
-                                var vURL = vPath2 + "/" + vInfo.Name;
+                                var vURL = vPath2 + "/" + vInfo.Name + "/";
                                 WriteText(vCtx, string.Format(IndexOfDirLine, vURL, vInfo.Name));
                             }
                             foreach (var vItem in Directory.GetFiles(vPath)) {
