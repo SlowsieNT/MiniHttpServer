@@ -215,14 +215,14 @@ namespace minihttp
                             foreach (var vItem in Directory.GetDirectories(vPath)) {
                                 var vPath2 = vPath.Substring(ServerPath.Length);
                                 var vInfo = new DirectoryInfo(vItem);
-                                var vURL = vPath2 + "/" + vInfo.Name + "/";
+                                var vURL = vPath2 + (vPath2.EndsWith("/") ? "" : "/") + vInfo.Name + "/";
                                 WriteText(vCtx, string.Format(IndexOfDirLine, vURL, vInfo.Name));
                             }
                             foreach (var vItem in Directory.GetFiles(vPath)) {
                                 var vPath2 = vPath.Substring(ServerPath.Length);
                                 var vInfo = new FileInfo(vItem);
-                                var vURL = vPath2 + "/" + vInfo.Name;
-                                WriteText(vCtx, string.Format(IndexOfDirLine, vURL, vInfo.Name));
+                                var vURL = vPath2 + (vPath2.EndsWith("/") ? "" : "/") + vInfo.Name;
+                                WriteText(vCtx, string.Format(IndexOfFileLine, vURL, vInfo.Name));
                             }
                             // Write remaining header
                             if (-1 != vNPos2)
